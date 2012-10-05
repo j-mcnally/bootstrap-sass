@@ -7,7 +7,7 @@ module BootstrapSass
     source_root File.expand_path('../../../../../vendor/assets/stylesheets/bootstrap/', __FILE__)
     
     def add_css_templates
-      template '_variables.scss', 'app/assets/variables.css.scss'
+      template '_variables.scss', 'app/assets/stylesheets/variables.css.scss'
     end
     
   end
