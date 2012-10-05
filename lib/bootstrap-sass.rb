@@ -37,6 +37,7 @@ module Bootstrap
 
   def self.register_rails_engine
     require 'bootstrap-sass/engine'
+    #require 'generators/bootstrap-sass/install_generators'
   end
 end
 
