@@ -8,7 +8,7 @@ module BootstrapSass
     argument :stylesheet_name, :default => "variables"
     
     def add_css_templates
-      copy_file "_#{stylesheet_name.underscore}.scss", "app/assets/stylesheets/#{stylesheet_name.underscore}.css.scss"
+      copy_file "_#{stylesheet_name}.scss", "app/assets/stylesheets/#{stylesheet_name}.css.scss"
     end
     
   end
