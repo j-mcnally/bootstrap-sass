@@ -1,15 +1,14 @@
 require "rails/generators"
 
 module BootstrapSass
-  class StylesheetsGenerator < Rails::Generators::Base
+  class StylesheetsGenerator < Rails::Generators::NamedBase
 
     desc "This will generate a copy of a given css file to the assets pipeline for customization."
-    argument :stylesheet_name, :default => "variables"
-    setup = (stylesheet_name == "bootstrap" or stylesheet_name == "main" or stylesheet_name == "setup") ? true : false
-    source_root File.expand_path("../../../../../vendor/assets/stylesheets/#{"bootstrap/" unless setup}", __FILE__)
-    
+    source_root File.expand_path("../../../../../vendor/assets/stylesheets/", __FILE__)
+
     def add_css_templates
-      copy_file "_#{stylesheet_name}.scss", "app/assets/stylesheets/#{stylesheet_name}.css.scss"
+      setup = (file_name == "bootstrap" or file_name == "main" or file_name == "setup") ? true : false
+      copy_file "#{"bootstrap/" if !setup}_#{file_name}.scss", "app/assets/stylesheets/#{file_name}.css.scss"
     end
     
   end
