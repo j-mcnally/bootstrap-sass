@@ -2,6 +2,14 @@
 // Mixins
 // --------------------------------------------------
 
+// Overridden from the forms component
+$input-border-focus:             #66afe9 !default;
+//** Placeholder text color
+$input-color-placeholder:        $gray-light !default;
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+
+$navbar-height:                    50px !default;
 
 // Utilities
 // -------------------------
